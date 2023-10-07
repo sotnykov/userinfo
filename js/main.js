@@ -72,22 +72,22 @@ do {
   }
 
   switch (userFavSport) {
-      case 'Football':
-      case 'Soccer':
-        userFavSport = 'Cool! Do you want to become a second Messi?';
-        break;
-      case 'Basketball':
-        userFavSport = 'Cool! Do you want to become a second Jordan?';
-        break;
-      case 'Formula 1':
-      case 'Formula1':
-      case 'Formula-1':
-      case 'F1':
-        userFavSport = 'Cool! Do you want to become a second Schumacher?';
-        break;
-      default:
-        userFavSport = `Your favourite sport is ${userFavSport}!`;
-    }
+    case 'Football':
+    case 'Soccer':
+      userFavSport = 'Cool! Do you want to become a second Messi?';
+      break;
+    case 'Basketball':
+      userFavSport = 'Cool! Do you want to become a second Jordan?';
+      break;
+    case 'Formula 1':
+    case 'Formula1':
+    case 'Formula-1':
+    case 'F1':
+      userFavSport = 'Cool! Do you want to become a second Schumacher?';
+      break;
+    default:
+      userFavSport = `Your favourite sport is ${userFavSport}!`;
+  }
 } while (!userFavSport);
 
 if (userAge === null) {
@@ -99,9 +99,13 @@ if (userAge === null) {
 } else if (userFavSport === null) {
   alert(`You are ${2023 - userAge} years old! ` + `You are living in ${userBornPlace}! `);
 } else if (userAge === null && userBornPlace === null) {
-  alert(`You are ${2023 - userAge} years old! `)
+  alert(`You are ${2023 - userAge} years old! `);
 } else if (userAge === null && userFavSport === null) {
-  alert(`You are living in ${userBornPlace}! `)
+  alert(`You are living in ${userBornPlace}! `);
+} else if (userBornPlace === null && userFavSport === null) {
+  alert(`You are ${2023 - userAge} years old! `);
+} else if (userAge === null && userBornPlace === null && userFavSport === null) {
+  alert("You didn't write anything!");
 } else {
-  alert(`You are ${2023 - userAge} years old! ` + `You are living in ${userBornPlace}! ` + userFavSport)
+  alert(`You are ${2023 - userAge} years old! ` + `You are living in ${userBornPlace}! ` + userFavSport);
 }
